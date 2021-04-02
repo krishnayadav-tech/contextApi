@@ -3,13 +3,21 @@ import userContext,{UserConsumer} from './userContext';
 const ComponentA = (props)=>{
     let mycontext = useContext(userContext);
     return (
-        <UserConsumer>
-            {
-                (value)=>{
-                    return <h1>{value} A</h1>;
+        <div>
+            {/* <UserConsumer>
+                {
+                    (value)=>{
+    
+                        return <h1>{value} A</h1>;
+                    }
                 }
-            }
-        </UserConsumer>
+            </UserConsumer> */}
+
+            <h1>{mycontext.value}</h1>
+            <input value={mycontext.value} type="text" onChange={(e)=>{ 
+                mycontext.changeValue(e.target.value);
+            }}/>
+        </div>
     )
 }
 

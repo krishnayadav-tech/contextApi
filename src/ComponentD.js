@@ -1,6 +1,6 @@
 const ComponentD = (props)=>{
 
-    return <h1>ComponentD</h1>
+    return <div> <h1>ComponentD</h1> </div>;
 }
 
 export default ComponentD;

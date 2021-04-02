@@ -3,7 +3,7 @@ import userContext from "./userContext";
 
 const ComponentF = (props)=>{
     let value = useContext(userContext);
-    return <h1>{value}</h1>
+    return <div><h1>{value.value}</h1></div>;
 }
 
 export default ComponentF;
